@@ -8,14 +8,6 @@ st.set_page_config(page_title="Perhitungan Nilai Gizi", layout="wide")
 def set_page(page_name):
     st.session_state.page = page_name
     
-
-# Load data
-@st.cache_data
-def load_data():
-    return pd.read_csv("database_gizi.csv")
-
-data = load_data()
-
 # Inisialisasi halaman pertama
 if "page" not in st.session_state:
     st.session_state.page = "beranda"
